@@ -1,5 +1,5 @@
 # Nearest-Library-Finder
-책 제목 입력 후 해당하는 책 선택 시, 해당 책 대출 가능한 도서관들 지도에 마킹 및 현 위치에서 가장 가까운 도서관 출력.
+책 제목 입력 후 해당하는 책 선택 시, 책 대출 가능한 도서관들 지도에 마킹 및 현 위치에서 가장 가까운 도서관 출력.
 - Node.js(Express), KolisNet-API, Frontend, KakaoMap-API(Web)
 - 부산지역 한정이나 소스코드 수정 시 전국으로 변경 가능 
 
