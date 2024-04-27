@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>대출가능 자료 검색</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./main.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+</head>
+<body>
+    <div id="search-container">
+        <div id="search-box-container">
+            <h1 id="title">대출가능 자료 검색</h1>
+            <div id="search-box">
+                <span class="material-icons">search</span>
+                <input type="text" name="book-name" placeholder="도서의 제목을 입력하세요." spellcheck="false">
+            </div>
+        </div>
+        <ul id="search-result">
+            <!-- 검색 결과 -->
+            <!-- 검색 결과 예시:
+            <li onclick="showBookDetail(875807104);">
+                    <p class="book-title">어린 왕자: 책장만 넘기면 문장이 완성되는 완벽한 어순 학습법</p>
+                    <p class="book-info">멀리깊이 / 원작: 앙투안 드 생텍쥐페리 ;편저: 선진호</p>
+            </li> -->
+
+        </ul>
+    </div>
+    
+    <div id="recommend">
+        <h2 id="recommend-book-name"><!-- 선택한 책 제목 --></h2>
+        <h3>거리 기준 추천 도서관: <span id="library-recommend"><!-- 추천 도서관 이름--></span></h3>
+        <span>
+            도서 위치: <span id="call-no"></span><br>
+            거리: <span id="distance"></span><br>
+            <a id="get-directions" href="#" target="_blank">길찾기</a>
+        </span>
+    </div>
+    <div id="map"></div>
+    
+    <script type="text/javascript" src="http://dapi.kakao.com/v2/maps/sdk.js?appkey={YOUR_API_KEY}&libraries=services"></script>
+    <script type="text/javascript" src="./main.js"></script>
+</body>
+</html>

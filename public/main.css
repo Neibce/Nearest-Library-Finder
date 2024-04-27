@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap'); /* Google Fonts에서 사용할 글씨체 가져옴.*/
+html, body { /* 스크롤 없는 전체화면을 구성하기 위해 설정 */
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.material-icons{
+    color: #444;
+}
+#title {
+    margin: 0;
+    color: #FFF;
+    font-size: 28px;
+    font-weight: 400;
+    text-align: center;
+}
+#search-container {
+    display: flex; /* 검색창 container를 뺀 남는 높이에 검색결과 창을 채우기 위해 사용 */
+    flex-direction: column;
+    width: 380px;
+    height: calc(100% - 30px);
+    position: absolute; /* 지도 위에 오버레이 하기 위해 사용 */
+    z-index: 999;
+    margin: 15px 25px;
+}
+#search-box-container {
+    padding: 10px 15px;
+    border-radius: 10px;
+    background-color: #3F51B5;
+    box-shadow: 2px 2px 10px #616161;
+}
+#search-box {
+    display: flex; /* 검색창 input을 앞의 material icon을 제외한 가로로 채우기 위해 사용 */
+    height: 40px;
+    padding: 0px 15px;
+    border-radius: 25px;
+    margin-top: 10px;
+    background-color: #FFF;
+}
+#search-box > .material-icons {
+    margin: auto 3px;  /* icon을 세로 기준 중앙에 놓기 위해 사용 */
+}
+#search-result {
+    width: 100%;
+    margin: 6px 0;
+    padding: 0;
+    list-style: none;
+    overflow-y: auto; /* 결과가 많을경우 스크롤 되게 */
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: 2px 2px 10px #616161;
+}
+#search-result > li {
+    padding: 15px 20px;
+    cursor: pointer;
+    border-bottom: 1px solid #EEE;
+}
+#search-result > li:hover {
+    background-color: rgba(238, 238, 238, 0.7);
+}
+#search-result > li:last-child {
+    border: none;
+}
+.book-title, .book-info {  /* 너무 긴 제목, 정보는 잘라내기 위해 사용 */
+    margin: 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.book-title {
+    font-size: 20px;
+}
+#map { /* 지도를 화면에 꽉 채우기 위해 사용 */
+    width: 100%;
+    height: 100%;
+}
+input {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+input[name="book-name"]{
+    border: 0;
+    flex-grow: 1;
+    font-size: 20px;
+    background-color: transparent;
+}
+input[name="book-name"]:focus {
+    outline:none;
+}
+#recommend {
+    display: none; /* 처음에는 나타나지 않아야 함 */
+    position: absolute; /* 지도 위에 오버레이 시키기 위해 사용 */
+    width: 380px;
+    right: 0;
+    z-index: 999;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+    margin: 15px 25px;
+    padding: 15px 20px;
+    box-shadow: 2px 2px 10px #616161;
+    text-align: right;
+}
+#recommend h2, #recommend h3 {
+    margin: 0;
+}
+#recommend h2 { /* 너무 긴 제목은 잘라내기 위해 사용 */
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+#recommend span {
+    font-size: 20px;
+}
